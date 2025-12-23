@@ -1,0 +1,23 @@
+# Build artifacts
+**/bin/
+**/obj/
+
+# Node modules & logs
+web/node_modules/
+web/.npm/
+*.log
+
+# Environment files
+.env
+env.api
+env.web
+
+# IDE
+.idea/
+.vscode/
+
+# Generated files
+dist/
+web/dist/
+*.user
+*.suo

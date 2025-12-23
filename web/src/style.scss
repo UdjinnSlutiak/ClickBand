@@ -1,0 +1,204 @@
+:root {
+  --bg-deep: #0d0603;
+  --bg-paper: #1d120b;
+  --panel-bg: #2d1d13;
+  --panel-highlight: #3b2619;
+  --panel-border: #5c3415;
+  --text-primary: #f7e7c2;
+  --text-muted: #cfb37a;
+  --accent: #d4933f;
+  --accent-strong: #f3c25f;
+  --accent-dark: #6c3b16;
+  --danger: #b64233;
+  --warning: #e0b251;
+  --success: #7a9a5b;
+  --control-bg: #1a100a;
+  --control-border: #4a2d16;
+  --shadow-elevation: 0 25px 50px rgba(10, 4, 0, 0.6);
+  --body-background: radial-gradient(circle at top, rgba(112, 67, 29, 0.25), rgba(8, 5, 3, 0.95) 60%), var(--bg-deep);
+  --app-background: linear-gradient(145deg, rgba(32, 20, 13, 0.95), rgba(12, 7, 4, 0.85));
+  --button-gradient: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  --button-disabled-gradient: linear-gradient(135deg, rgba(80, 58, 37, 0.9), rgba(59, 41, 28, 0.8));
+  --button-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 25px rgba(8, 3, 0, 0.8);
+  --button-disabled-shadow: none;
+  --button-hover-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+  --input-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.6);
+  --panel-border-soft: rgba(210, 158, 92, 0.3);
+  --panel-border-strong: rgba(210, 158, 92, 0.35);
+  --error-bg: rgba(182, 66, 51, 0.2);
+  --error-border: rgba(182, 66, 51, 0.4);
+  --warning-bg: rgba(224, 178, 81, 0.13);
+  --warning-border: rgba(224, 178, 81, 0.35);
+  --success-bg: rgba(212, 147, 63, 0.15);
+  --success-border: rgba(212, 147, 63, 0.45);
+  --modal-backdrop: rgba(5, 2, 0, 0.85);
+  --tile-border: rgba(216, 161, 96, 0.25);
+  --tile-bg: rgba(17, 10, 6, 0.65);
+  --tile-hover: rgba(39, 23, 12, 0.85);
+  --tile-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 10px 25px rgba(0, 0, 0, 0.45);
+  --chip-border: rgba(0, 0, 0, 0.2);
+  --chip-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+  --surface-glow: rgba(16, 10, 6, 0.6);
+  --surface-button: rgba(17, 10, 6, 0.65);
+  --surface-button-border: rgba(216, 161, 96, 0.4);
+  --surface-button-disabled: rgba(37, 24, 16, 0.5);
+  --surface-button-disabled-text: rgba(255, 255, 255, 0.3);
+  --surface-button-border-muted: rgba(216, 161, 96, 0.2);
+  --surface-button-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 14px rgba(0, 0, 0, 0.45);
+  --ghost-bg: rgba(18, 11, 7, 0.55);
+  --ghost-border: rgba(212, 147, 63, 0.6);
+  --ghost-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --switch-track: rgba(255, 255, 255, 0.2);
+  --switch-thumb: var(--panel-highlight);
+  --secondary-bg: rgba(14, 8, 5, 0.4);
+  --secondary-border: rgba(216, 161, 96, 0.5);
+  --danger-button-bg: rgba(45, 10, 6, 0.5);
+  --danger-button-border: rgba(182, 66, 51, 0.5);
+  --participant-avatar-border: rgba(0, 0, 0, 0.2);
+  --participant-avatar-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+  --badge-default-bg: rgba(32, 21, 14, 0.8);
+  --badge-default-border: rgba(212, 147, 63, 0.5);
+  --badge-connected-bg: rgba(53, 67, 46, 0.6);
+  --badge-connected-border: rgba(122, 154, 91, 0.8);
+  --badge-warning-bg: rgba(64, 40, 15, 0.6);
+  --badge-warning-border: rgba(224, 178, 81, 0.5);
+  --badge-danger-bg: rgba(56, 17, 12, 0.65);
+  --badge-danger-border: rgba(182, 66, 51, 0.6);
+  --avatar-fallback-gradient: linear-gradient(145deg, #5b341b, #c08a3a);
+  --avatar-fallback-text: #f7e7c2;
+}
+
+:root[data-theme='light'] {
+  --bg-deep: #f5ede1;
+  --bg-paper: #fff9f0;
+  --panel-bg: #fff7ec;
+  --panel-highlight: #f0dfc8;
+  --panel-border: #d2a163;
+  --text-primary: #2f1b0c;
+  --text-muted: #8c6b44;
+  --accent: #c67c2d;
+  --accent-strong: #b06114;
+  --accent-dark: #8e4b1b;
+  --danger: #b94838;
+  --warning: #b4832b;
+  --success: #6b8b3f;
+  --control-bg: #fff4e5;
+  --control-border: #d8b892;
+  --shadow-elevation: 0 20px 40px rgba(158, 116, 71, 0.25);
+  --body-background: radial-gradient(circle at top, rgba(255, 231, 204, 0.85), rgba(243, 225, 205, 0.95) 60%), var(--bg-deep);
+  --app-background: linear-gradient(145deg, rgba(250, 236, 220, 0.95), rgba(237, 216, 195, 0.85));
+  --button-gradient: linear-gradient(135deg, #e6b980, #d97723);
+  --button-disabled-gradient: linear-gradient(135deg, rgba(214, 184, 146, 0.8), rgba(203, 161, 114, 0.6));
+  --button-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 10px 20px rgba(160, 124, 84, 0.4);
+  --button-disabled-shadow: none;
+  --button-hover-shadow: 0 16px 30px rgba(123, 82, 36, 0.35);
+  --input-shadow: inset 0 1px 4px rgba(205, 168, 130, 0.5);
+  --panel-border-soft: rgba(200, 150, 90, 0.4);
+  --panel-border-strong: rgba(200, 150, 90, 0.6);
+  --error-bg: rgba(185, 72, 56, 0.15);
+  --error-border: rgba(185, 72, 56, 0.45);
+  --warning-bg: rgba(194, 135, 42, 0.16);
+  --warning-border: rgba(194, 135, 42, 0.4);
+  --success-bg: rgba(216, 170, 98, 0.16);
+  --success-border: rgba(216, 170, 98, 0.45);
+  --modal-backdrop: rgba(248, 240, 230, 0.9);
+  --tile-border: rgba(193, 148, 95, 0.5);
+  --tile-bg: rgba(252, 245, 233, 0.9);
+  --tile-hover: rgba(243, 229, 207, 0.95);
+  --tile-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 10px 25px rgba(166, 125, 85, 0.3);
+  --chip-border: rgba(160, 120, 80, 0.4);
+  --chip-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.5);
+  --surface-glow: rgba(255, 247, 236, 0.95);
+  --surface-button: rgba(255, 239, 220, 0.85);
+  --surface-button-border: rgba(184, 132, 78, 0.5);
+  --surface-button-disabled: rgba(230, 210, 190, 0.7);
+  --surface-button-disabled-text: rgba(92, 65, 40, 0.5);
+  --surface-button-border-muted: rgba(184, 132, 78, 0.3);
+  --surface-button-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 6px 14px rgba(189, 146, 100, 0.4);
+  --ghost-bg: rgba(255, 248, 236, 0.85);
+  --ghost-border: rgba(199, 143, 81, 0.8);
+  --ghost-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  --switch-track: rgba(125, 90, 55, 0.25);
+  --switch-thumb: #f3d7b5;
+  --secondary-bg: rgba(255, 246, 232, 0.85);
+  --secondary-border: rgba(199, 143, 81, 0.8);
+  --danger-button-bg: rgba(255, 228, 222, 0.9);
+  --danger-button-border: rgba(191, 93, 81, 0.7);
+  --participant-avatar-border: rgba(164, 126, 85, 0.6);
+  --participant-avatar-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.5);
+  --badge-default-bg: rgba(255, 248, 236, 0.9);
+  --badge-default-border: rgba(199, 143, 81, 0.8);
+  --badge-connected-bg: rgba(209, 229, 200, 0.9);
+  --badge-connected-border: rgba(134, 160, 101, 0.8);
+  --badge-warning-bg: rgba(255, 241, 214, 0.9);
+  --badge-warning-border: rgba(204, 157, 86, 0.7);
+  --badge-danger-bg: rgba(255, 228, 224, 0.9);
+  --badge-danger-border: rgba(191, 93, 81, 0.7);
+  --avatar-fallback-gradient: linear-gradient(145deg, #f4d6a3, #dca15c);
+  --avatar-fallback-text: #3a240c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--body-background);
+  color: var(--text-primary);
+  font-family: 'Cinzel', 'IM Fell English', 'Georgia', serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--app-background);
+}
+
+button {
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  background: var(--button-gradient);
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: var(--button-shadow);
+}
+
+button:disabled {
+  background: var(--button-disabled-gradient);
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: var(--button-disabled-shadow);
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: var(--button-hover-shadow);
+}
+
+input,
+select {
+  border-radius: 0.75rem;
+  border: 1px solid var(--control-border);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  background: var(--control-bg);
+  color: var(--text-primary);
+  box-shadow: var(--input-shadow);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}

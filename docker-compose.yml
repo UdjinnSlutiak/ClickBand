@@ -1,0 +1,43 @@
+services:
+  clickband-redis:
+    image: redis:7.4-alpine
+    container_name: ${COMPOSE_PROJECT_NAME:-clickband}-redis
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis-data:/data
+
+  clickband-api:
+    build:
+      context: .
+      dockerfile: src/ClickBand.Api/Dockerfile
+    env_file:
+      - env.api
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      REDIS_CONNECTION_STRING: clickband-redis:6379
+    depends_on:
+      - clickband-redis
+    ports:
+      - "${API_PORT:-5173}:8080"
+
+  clickband-web:
+    build:
+      context: web
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://clickband-api:8080}
+        VITE_SIGNALR_HUB_URL: ${VITE_SIGNALR_HUB_URL:-http://clickband-api:8080/hubs/rooms}
+    env_file:
+      - env.web
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://clickband-api:8080}
+      VITE_SIGNALR_HUB_URL: ${VITE_SIGNALR_HUB_URL:-http://clickband-api:8080/hubs/rooms}
+    depends_on:
+      - clickband-api
+    ports:
+      - "${WEB_PORT:-4173}:80"
+
+volumes:
+  redis-data:

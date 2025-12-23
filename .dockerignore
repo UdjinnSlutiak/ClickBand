@@ -1,0 +1,12 @@
+.git
+bin
+obj
+node_modules
+web/node_modules
+dist
+web/dist
+.env
+env.api
+env.web
+**/*.user
+**/*.suo
