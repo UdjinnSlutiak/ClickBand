@@ -39,6 +39,7 @@ builder.Services.AddSingleton<IRoomLinkBuilder, RoomLinkBuilder>();
 builder.Services.AddSingleton<ISyncPayloadFactory, SyncPayloadFactory>();
 builder.Services.AddSingleton<IRoomService, RoomService>();
 builder.Services.AddSingleton<ITelegramWebhookService, TelegramWebhookService>();
+builder.Services.AddHostedService<TelegramWebhookRegistrationService>();
 
 builder.Services.AddSingleton<ITelegramBotClient>(sp =>
 {

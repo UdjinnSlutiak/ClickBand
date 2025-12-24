@@ -21,3 +21,4 @@ dist/
 web/dist/
 *.user
 *.suo
+.DS_Store
